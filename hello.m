@@ -21,11 +21,23 @@
  @end
 
  int main(){
+    // NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     [MyClass classHello];
 
-    MyClass *obj = [[MyClass alloc] init];
+   //   MyClass *obj = [[MyClass alloc] init];
 
-    [obj instanceHello];
+   //  [obj instanceHello];
+
+   
+
+    // [obj release];
+    // [pool drain];
+
+    @autoreleasepool{
+      MyClass *obj = [[MyClass alloc] init];
+
+       [obj instanceHello];
+    }
 
     return 0;
 
