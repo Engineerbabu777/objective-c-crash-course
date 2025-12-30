@@ -1,8 +1,33 @@
+#include <Foundation/Foundation.h>
 
-#include <stdio.h>
+@interface MyClass : NSObject 
 
-int main(void){
-    printf("Hello World!");
+// - needs to have objec to class
+// + no needs
+
+- (void)instanceHello; // Defination of instance method
++ (void)classHello; // Defination of class method
+
+@end
+
+@implementation MyClass
+ - (void)instanceHello{
+    NSLog(@"Instance Hello");
+ }
+ + (void)classHello{
+    NSLog(@"Class Hello");
+ }
+
+ @end
+
+ int main(){
+    [MyClass classHello];
+
+    MyClass *obj = [[MyClass alloc] init];
+
+    [obj instance];
 
     return 0;
-}
+
+
+ }
