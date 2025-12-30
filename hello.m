@@ -25,7 +25,7 @@
 
     MyClass *obj = [[MyClass alloc] init];
 
-    [obj instance];
+    [obj instanceHello];
 
     return 0;
 
